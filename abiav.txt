@@ -1,0 +1,22 @@
+
+#add this value to the API url :
+"https://randomuser.me/api/?results="https://api.agify.io/?name=meelad"+ name1+ "&age=32" + age2 + "&count=21" + count3".
+
+
+# send requests and retrieve their responses by using HttpClient
+	HttpClient client = HttpClient.newHttpClient();
+	HttpRequest request = HttpRequest.newBuilder()
+		.uri(URI.create("https://randomuser.me/api/")).build();
+	HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+# read api from a file :
+try {
+		FileWriter file = new FileWriter ("fileav.txt");
+			file.write(res.toString());
+			file.close();
+			
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("file created");
