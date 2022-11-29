@@ -6,4 +6,5 @@
  *
  */
 module APIav {
+	requires java.net.http;
 }
