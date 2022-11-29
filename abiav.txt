@@ -20,3 +20,21 @@ try {
 			e.printStackTrace();
 		}
 		System.out.println("file created");
+
+#search a  file from  string to java
+  File file = new File("fileav.txt");
+	         
+	        String data = "age\":32,\"count\":21,\"name\":\"meelad";
+	         
+	        try(FileOutputStream fos = new FileOutputStream(file);
+	                BufferedOutputStream bos = new BufferedOutputStream(fos)) {
+	            //convert string to byte array
+	            byte[] bytes = data.getBytes();
+	            //write byte array to file
+	            bos.write(bytes);
+	            bos.close();
+	            fos.close();
+	            System.out.print("file successfully.");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
